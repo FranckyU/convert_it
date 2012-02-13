@@ -1,0 +1,7 @@
+If you have a lot of FLV files and want to convert those to MP3, this script will become your close friend.
+
+Just install ffmpeg on your machine, then copy/paste the ruby file convert.rb in any directory where your FLVs are.
+
+Then run the script in shell (`ruby convert.rb`) and it will create a directory named 'output' where your MP3s will be created.
+
+Tested on linux, windows...I don't know
