@@ -2,11 +2,10 @@
 
 cur_dir = File.absolute_path(__FILE__).sub(File.basename(__FILE__), "")
 
-Dir.unlink("output") if Dir.exist?("output")
-Dir.mkdir "output"
+Dir.mkdir "output" unless Dir.exist?("output")
 
 Dir.foreach(cur_dir) do |file|
-	if File.file?(file) && File.extname(file) == '.flv'
+	if File.file?(file) && File.extname(file) =~ /\.flv/i
 		flv_name = File.join(cur_dir, file)
 
 		mp3_name = file.gsub(/flv|FLV/, 'mp3')
